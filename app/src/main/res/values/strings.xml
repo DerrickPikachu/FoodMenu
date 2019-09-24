@@ -6,4 +6,6 @@
     <string name="corn_soup">玉米濃湯</string>
     <string name="order">訂購</string>
     <string name="hint_to_user">請訂餐</string>
+    <string name="fried_chicken" >雞塊</string>
+    <string name="coffee">咖啡</string>
 </resources>

@@ -7,6 +7,27 @@
     tools:context=".MainActivity">
 
     <CheckBox
+        android:id="@+id/friedChicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/fried_chicken"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cola"
+        app:layout_constraintTop_toBottomOf="@+id/cola"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/coffee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coffee"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/cornSoup"
+        app:layout_constraintTop_toTopOf="@+id/friedChicken" />
+
+    <CheckBox
         android:id="@+id/hamburger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,12 +55,13 @@
         android:id="@+id/cola"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="@string/cola"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/hamburger"
         app:layout_constraintTop_toBottomOf="@+id/hamburger"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/cornSoup"
@@ -58,10 +80,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cola"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintTop_toBottomOf="@+id/coffee"
+        app:layout_constraintVertical_bias="0.110000014" />
 
     <TextView
         android:id="@+id/result"
@@ -73,4 +95,5 @@
         app:layout_constraintStart_toStartOf="@+id/orderBtn"
         app:layout_constraintTop_toBottomOf="@+id/orderBtn"
         app:layout_constraintVertical_bias="0.06999999" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
