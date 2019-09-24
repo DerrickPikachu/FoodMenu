@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="@+id/cola" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/orderBtn"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:text="@string/order"
@@ -64,13 +64,13 @@
         app:layout_constraintVertical_bias="0.082" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hint_to_user"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/orderBtn"
+        app:layout_constraintTop_toBottomOf="@+id/orderBtn"
         app:layout_constraintVertical_bias="0.06999999" />
 </androidx.constraintlayout.widget.ConstraintLayout>
