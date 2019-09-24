@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView resultPrint;
-    CheckBox boxes[];
+    int boxesId[] = {R.id.hamburger, R.id.frenchFries, R.id.cola, R.id.cornSoup, R.id.friedChicken, R.id.coffee};
     Button orderBtn;
 
     @Override
@@ -19,13 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        boxes = new CheckBox[4];
         resultPrint = findViewById(R.id.result);
         orderBtn = findViewById(R.id.orderBtn);
-        boxes[0] = findViewById(R.id.hamburger);
-        boxes[1] = findViewById(R.id.frenchFries);
-        boxes[2] = findViewById(R.id.cola);
-        boxes[3] = findViewById(R.id.cornSoup);
 
         orderBtn.setOnClickListener(this);
     }
@@ -33,10 +28,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         String result = "你點購的餐點是:\n";
+        CheckBox box;
 
-        for (int i=0; i<4; i++) {
-            if (boxes[i].isChecked())
-                result = result + boxes[i].getText() + "\n";
+        for (int i:boxesId) {
+            box = findViewById(i);
+            if (box.isChecked())
+                result = result + box.getText() + "\n";
         }
 
         resultPrint.setText(result);
