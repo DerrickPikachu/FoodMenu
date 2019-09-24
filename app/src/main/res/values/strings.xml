@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FoodMenu</string>
+    <string name="hamburger">漢堡</string>
+    <string name="french_fries">薯條</string>
+    <string name="cola">可樂</string>
+    <string name="corn_soup">玉米濃湯</string>
+    <string name="order">訂購</string>
+    <string name="hint_to_user">請訂餐</string>
 </resources>

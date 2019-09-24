@@ -6,13 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <CheckBox
+        android:id="@+id/hamburger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/hamburger"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
 
+    <CheckBox
+        android:id="@+id/frenchFries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/french_fries"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toEndOf="@+id/hamburger"
+        app:layout_constraintTop_toTopOf="@+id/hamburger" />
+
+    <CheckBox
+        android:id="@+id/cola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cola"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/hamburger"
+        app:layout_constraintTop_toBottomOf="@+id/hamburger"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <CheckBox
+        android:id="@+id/cornSoup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/corn_soup"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/frenchFries"
+        app:layout_constraintTop_toTopOf="@+id/cola" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="@string/order"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cola"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_to_user"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.06999999" />
 </androidx.constraintlayout.widget.ConstraintLayout>
