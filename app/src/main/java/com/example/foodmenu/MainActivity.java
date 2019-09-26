@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView resultPrint;
     private int boxesId[] = {R.id.hamburger, R.id.frenchFries, R.id.cola, R.id.cornSoup, R.id.friedChicken, R.id.salad, R.id.coffee, R.id.applePie};
+    private CheckBox wordType;
     private Button orderBtn;
     private ArrayList<String> checked;
 
@@ -26,7 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultPrint = findViewById(R.id.result);
         orderBtn = findViewById(R.id.orderBtn);
         checked = new ArrayList<>();
+        wordType = findViewById(R.id.wordType);
 
+        wordType.setOnCheckedChangeListener(this);
         orderBtn.setOnClickListener(this);
 
         for (int i:boxesId) {
@@ -53,14 +56,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
         String result = "您點的餐點是:\n";
 
-        if (b)
-            checked.add(compoundButton.getText().toString());
+        if (compoundButton.getId() != R.id.wordType) {
+            if (b)
+                checked.add(compoundButton.getText().toString());
+            else
+                checked.remove(compoundButton.getText().toString());
+
+            for (int i = 0; i < checked.size(); i++)
+                result = result + checked.get(i) + "\n";
+
+            resultPrint.setText(result);
+        }
+        else if (b)
+            resultPrint.setTextSize(15);
         else
-            checked.remove(compoundButton.getText().toString());
-
-        for (int i=0; i<checked.size(); i++)
-            result = result + checked.get(i) + "\n";
-
-        resultPrint.setText(result);
+            resultPrint.setTextSize(30);
     }
 }

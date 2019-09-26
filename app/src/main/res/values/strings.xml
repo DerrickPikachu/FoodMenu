@@ -10,4 +10,5 @@
     <string name="coffee">咖啡</string>
     <string name="salad">沙拉</string>
     <string name="apple_pie">蘋果派</string>
+    <string name="word_type" >小字型</string>
 </resources>
