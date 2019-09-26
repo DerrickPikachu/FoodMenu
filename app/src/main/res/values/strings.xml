@@ -8,4 +8,6 @@
     <string name="hint_to_user">請訂餐</string>
     <string name="fried_chicken" >雞塊</string>
     <string name="coffee">咖啡</string>
+    <string name="salad">沙拉</string>
+    <string name="apple_pie">蘋果派</string>
 </resources>

@@ -22,10 +22,11 @@
         android:id="@+id/coffee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="@string/coffee"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/cornSoup"
-        app:layout_constraintTop_toTopOf="@+id/friedChicken" />
+        app:layout_constraintStart_toStartOf="@+id/friedChicken"
+        app:layout_constraintTop_toBottomOf="@+id/friedChicken" />
 
     <CheckBox
         android:id="@+id/hamburger"
@@ -72,6 +73,24 @@
         app:layout_constraintStart_toStartOf="@+id/frenchFries"
         app:layout_constraintTop_toTopOf="@+id/cola" />
 
+    <CheckBox
+        android:id="@+id/salad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salad"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/cornSoup"
+        app:layout_constraintTop_toTopOf="@+id/friedChicken" />
+
+    <CheckBox
+        android:id="@+id/applePie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apple_pie"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/salad"
+        app:layout_constraintTop_toTopOf="@+id/coffee" />
+
     <Button
         android:id="@+id/orderBtn"
         android:layout_width="350dp"
@@ -80,20 +99,35 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coffee"
-        app:layout_constraintVertical_bias="0.110000014" />
+        app:layout_constraintVertical_bias="0.164" />
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hint_to_user"
-        android:textSize="30sp"
+    <ScrollView
+        android:id="@+id/resultScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/orderBtn"
+        app:layout_constraintHorizontal_bias="0.397"
         app:layout_constraintStart_toStartOf="@+id/orderBtn"
-        app:layout_constraintTop_toBottomOf="@+id/orderBtn"
-        app:layout_constraintVertical_bias="0.06999999" />
+        app:layout_constraintTop_toBottomOf="@+id/orderBtn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_to_user"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
