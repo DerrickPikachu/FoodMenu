@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView resultPrint;
-    int boxesId[] = {R.id.hamburger, R.id.frenchFries, R.id.cola, R.id.cornSoup, R.id.friedChicken, R.id.coffee};
+    int boxesId[] = {R.id.hamburger, R.id.frenchFries, R.id.cola, R.id.cornSoup};
     Button orderBtn;
 
     @Override
