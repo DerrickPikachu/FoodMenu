@@ -14,10 +14,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.152" />
 
     <CheckBox
         android:id="@+id/frenchFries"
@@ -26,7 +26,7 @@
         android:text="@string/french_fries"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toEndOf="@+id/hamburger"
         app:layout_constraintTop_toTopOf="@+id/hamburger" />
 
@@ -73,5 +73,42 @@
         app:layout_constraintStart_toStartOf="@+id/orderBtn"
         app:layout_constraintTop_toBottomOf="@+id/orderBtn"
         app:layout_constraintVertical_bias="0.06999999" />
+
+    <ImageView
+        android:id="@+id/burgerImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/hamburger"
+        app:layout_constraintStart_toEndOf="@+id/hamburger"
+        app:layout_constraintTop_toTopOf="@+id/hamburger"
+        app:srcCompat="@drawable/hambuger" />
+
+    <ImageView
+        android:id="@+id/frenchFryImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frenchFries"
+        app:layout_constraintStart_toEndOf="@+id/frenchFries"
+        app:layout_constraintTop_toTopOf="@+id/frenchFries"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/freanchfry" />
+
+    <ImageView
+        android:id="@+id/colaImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cola"
+        app:layout_constraintStart_toEndOf="@+id/cola"
+        app:layout_constraintTop_toTopOf="@+id/cola"
+        app:srcCompat="@drawable/cola" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cornSoup"
+        app:layout_constraintStart_toEndOf="@+id/cornSoup"
+        app:layout_constraintTop_toTopOf="@+id/cornSoup"
+        app:srcCompat="@drawable/cronSoup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
