@@ -7,27 +7,6 @@
     tools:context=".MainActivity">
 
     <CheckBox
-        android:id="@+id/friedChicken"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/fried_chicken"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/cola"
-        app:layout_constraintTop_toBottomOf="@+id/cola"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/coffee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/coffee"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/cornSoup"
-        app:layout_constraintTop_toTopOf="@+id/friedChicken" />
-
-    <CheckBox
         android:id="@+id/hamburger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,14 +55,13 @@
         android:id="@+id/orderBtn"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="@string/order"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coffee"
-        app:layout_constraintVertical_bias="0.110000014" />
+        app:layout_constraintTop_toBottomOf="@+id/cornSoup" />
 
     <TextView
         android:id="@+id/result"
