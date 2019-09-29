@@ -7,17 +7,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     private ArrayList<String> checked;
     TextView resultPrint;
     int boxesId[] = {R.id.hamburger, R.id.frenchFries, R.id.cola, R.id.cornSoup};
-    Button orderBtn;
+    int checkedNum = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         resultPrint = findViewById(R.id.result);
-        orderBtn = findViewById(R.id.orderBtn);
         checked = new ArrayList<>();
-
-        orderBtn.setOnClickListener(this);
 
         for (int i:boxesId) {
             CheckBox box = findViewById(i);
@@ -37,31 +35,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View view) {
-        String result = "您訂購的餐點是:\n";
-        CheckBox box;
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        int visible = 0;
+        int id = compoundButton.getId();
+        ImageView tem = null;
 
-        for (int i:boxesId) {
-            box = findViewById(i);
-            if (box.isChecked())
-                result = result + box.getText() + "\n";
+        if (b) {
+            visible = View.VISIBLE;
+            checkedNum++;
+        }
+        else {
+            visible = View.GONE;
+            checkedNum--;
         }
 
-        resultPrint.setText(result);
-    }
+        if (id == R.id.hamburger) {
+            tem = findViewById(R.id.outputImg1);
+        }
+        else if (id == R.id.frenchFries) {
+            tem = findViewById(R.id.outputImg2);
+        }
+        else if (id == R.id.cola) {
+            tem = findViewById(R.id.outputImg3);
+        }
+        else if (id == R.id.cornSoup) {
+            tem = findViewById(R.id.outputImg4);
+        }
 
-    @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-        String result = "您點的餐點是:\n";
-
-        if (b)
-            checked.add(compoundButton.getText().toString());
-        else
-            checked.remove(compoundButton.getText().toString());
-
-        for (int i=0; i<checked.size(); i++)
-            result = result + checked.get(i) + "\n";
-
-        resultPrint.setText(result);
+        tem.setVisibility(visible);
+        String s = (checkedNum > 0)? "您點的餐點如下:":"請點餐!";
+        resultPrint.setText(s);
     }
 }
