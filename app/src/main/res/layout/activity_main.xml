@@ -103,12 +103,12 @@
         app:srcCompat="@drawable/cola" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView7"
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="@+id/cornSoup"
         app:layout_constraintStart_toEndOf="@+id/cornSoup"
         app:layout_constraintTop_toTopOf="@+id/cornSoup"
-        app:srcCompat="@drawable/cronSoup" />
+        app:srcCompat="@drawable/soup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
