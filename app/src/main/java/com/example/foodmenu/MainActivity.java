@@ -11,12 +11,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
-    private TextView resultPrint;
-    private int boxesId[] = {R.id.hamburger, R.id.frenchFries, R.id.cola, R.id.cornSoup, R.id.friedChicken, R.id.salad, R.id.coffee, R.id.applePie};
-    private Button orderBtn;
     private ArrayList<String> checked;
+    TextView resultPrint;
+    int boxesId[] = {R.id.hamburger, R.id.frenchFries, R.id.cola, R.id.cornSoup};
+    Button orderBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

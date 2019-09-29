@@ -7,28 +7,6 @@
     tools:context=".MainActivity">
 
     <CheckBox
-        android:id="@+id/friedChicken"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/fried_chicken"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/cola"
-        app:layout_constraintTop_toBottomOf="@+id/cola"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/coffee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/coffee"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/friedChicken"
-        app:layout_constraintTop_toBottomOf="@+id/friedChicken" />
-
-    <CheckBox
         android:id="@+id/hamburger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,10 +14,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.152" />
 
     <CheckBox
         android:id="@+id/frenchFries"
@@ -48,7 +26,7 @@
         android:text="@string/french_fries"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toEndOf="@+id/hamburger"
         app:layout_constraintTop_toTopOf="@+id/hamburger" />
 
@@ -73,61 +51,88 @@
         app:layout_constraintStart_toStartOf="@+id/frenchFries"
         app:layout_constraintTop_toTopOf="@+id/cola" />
 
-    <CheckBox
-        android:id="@+id/salad"
+    <TextView
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/salad"
+        android:layout_marginTop="50dp"
+        android:text="@string/hint_to_user"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/cornSoup"
-        app:layout_constraintTop_toTopOf="@+id/friedChicken" />
+        app:layout_constraintStart_toStartOf="@+id/cola"
+        app:layout_constraintTop_toBottomOf="@+id/cola" />
 
-    <CheckBox
-        android:id="@+id/applePie"
+    <ImageView
+        android:id="@+id/burgerImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/hamburger"
+        app:layout_constraintStart_toEndOf="@+id/hamburger"
+        app:layout_constraintTop_toTopOf="@+id/hamburger"
+        app:srcCompat="@drawable/hambuger" />
+
+    <ImageView
+        android:id="@+id/frenchFryImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frenchFries"
+        app:layout_constraintStart_toEndOf="@+id/frenchFries"
+        app:layout_constraintTop_toTopOf="@+id/frenchFries"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/freanchfry" />
+
+    <ImageView
+        android:id="@+id/colaImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cola"
+        app:layout_constraintStart_toEndOf="@+id/cola"
+        app:layout_constraintTop_toTopOf="@+id/cola"
+        app:srcCompat="@drawable/cola" />
+
+    <ImageView
+        android:id="@+id/cornSoupImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cornSoup"
+        app:layout_constraintStart_toEndOf="@+id/cornSoup"
+        app:layout_constraintTop_toTopOf="@+id/cornSoup"
+        app:srcCompat="@drawable/soup" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/apple_pie"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/salad"
-        app:layout_constraintTop_toTopOf="@+id/coffee" />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/result">
 
-    <Button
-        android:id="@+id/orderBtn"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:text="@string/order"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coffee"
-        app:layout_constraintVertical_bias="0.164" />
+        <ImageView
+            android:id="@+id/outputImg1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/hambuger" />
 
-    <ScrollView
-        android:id="@+id/resultScroll"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/orderBtn"
-        app:layout_constraintHorizontal_bias="0.397"
-        app:layout_constraintStart_toStartOf="@+id/orderBtn"
-        app:layout_constraintTop_toBottomOf="@+id/orderBtn">
+        <ImageView
+            android:id="@+id/outputImg2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/freanchfry" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <ImageView
+            android:id="@+id/outputImg3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/cola" />
 
-            <TextView
-                android:id="@+id/result"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hint_to_user"
-                android:textSize="30sp" />
-        </LinearLayout>
-    </ScrollView>
+        <ImageView
+            android:id="@+id/outputImg4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/soup" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
